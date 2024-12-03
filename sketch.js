@@ -5,8 +5,20 @@ function setup()
 
 function draw()
 {
-    background (220);
-    stroke('white');
-    ellipse(width/2, height * 0.8, 100, 120);
-    ellipse(width/2, height * 0.6, 80, 70);
+    console.log("Yo");
+
+    background("#5a6c2b");
+    fill("#8bae4f");
+    noStroke();
+    square(0,0,100,0);
+    square (100,100,100);
+    square(200,200,100);
+    square (300,300,100);
+    square(0,200,100);
+    square(100,300,100);
+    square(200,0,100);
+    square(300,100,100)
+
+    
+
 }
