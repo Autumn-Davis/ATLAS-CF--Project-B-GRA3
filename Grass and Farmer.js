@@ -3,6 +3,9 @@ function setup()
 	createCanvas(400,400);
 }
 
+let c = ("#a34749");
+let sk = ("#dec58f");
+
 function draw()
 {
     console.log("Yo");
@@ -30,7 +33,7 @@ function draw()
   fill("brown")
   circle(50,45,15)
   
-  let farmer =
+  // let farmer =
   
   stroke(1)
   fill(sk);
