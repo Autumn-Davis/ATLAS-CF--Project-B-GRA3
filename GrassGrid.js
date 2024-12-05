@@ -1,5 +1,8 @@
+let size;
+
 function setup() {
-    createCanvas(750, 750);
+    size = min(windowWidth, windowHeight);
+    createCanvas(size, size);
 }
 
 function draw(){
@@ -20,24 +23,23 @@ function drawGrass(){
     // square(200,0,100);
     // square(300,100,100);
 
-    let offset = width / 5;
-  for (let i = 0; i < 5; i++) {
-    let x = i * offset;
-    for (let j = 0; j < 5; j++) {
-      let y = offset / 2 + j * offset;
-      let stagger = 0;
-      if (j % 2 == 1) {
-        stagger = offset / 2;
-      }
-      drawSquare(x + stagger, y, 150, 150);
-    }
-  }
-}
+//     let offset = width / 8;
+//   for (let i = 0; i < 8; i++) {
+//     let x = i * offset;
+//     for (let j = 0; j < 8; j++) {
+//       let y = offset / 2 + j * offset;
+//       let stagger = 0;
+//       if (j % 2 == 1) {
+//         stagger = offset / 2;
+//       }
+//       drawSquare(x + stagger, y, 100, 100);
+//     }
+//   }
+// }
 
-function drawSquare(){
-    push(); 
-    fill("#8bae4f");
-    noStroke();
-    square
-    pop();
-}
+// function drawSquare(x, y, 100, 100){
+//     push(); 
+//     fill("#8bae4f");
+//     noStroke();
+//     pop();
+ }
