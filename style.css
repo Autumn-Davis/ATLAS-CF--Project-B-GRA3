@@ -16,5 +16,7 @@ main {
 
 canvas {
     display: block;
+    /* border: solid #8bae4f 1px; */
+    border-radius: 20px;
   }
   
