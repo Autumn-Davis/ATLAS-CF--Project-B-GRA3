@@ -4,20 +4,28 @@ let farmerx = 0
 let farmery = 0
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(800, 800);
   
 
   
 }
 
 function keyPressed () {
-  if (keyCode === DOWN_ARROW){farmery +=1}
+  if (keyCode === DOWN_ARROW && farmery < 6){
+    farmery +=1;
+}
 
-  if (keyCode === UP_ARROW){farmery -=1}
+  if (keyCode === UP_ARROW && farmery > -1){
+    farmery -=1;
+}
 
-if (keyCode === LEFT_ARROW){farmerx -=1}
+if (keyCode === LEFT_ARROW && farmerx > 0){
+    farmerx -=1;
+}
 
-  if (keyCode === RIGHT_ARROW){farmerx = 1}
+  if (keyCode === RIGHT_ARROW && farmerx < 7){
+    farmerx += 1;
+}
   
 }
 
@@ -27,39 +35,64 @@ if (keyCode === LEFT_ARROW){farmerx -=1}
 
 
 function draw() {
-  background(220);
-  
   
 //grass
-  background("seagreen")
-  fill("darkgreen")
+  background("#5a6c2b");
+  fill("#8bae4f");
   noStroke();
+
   square(0,0,100,0);
-  square (100,100,100);
+  square(100,100,100);
   square(200,200,100);
-  square (300,300,100);
+  square(300,300,100);
   square(0,200,100);
   square(100,300,100);
   square(200,0,100);
   square(300,100,100);
+
+  square(0+400,0,100,0);
+  square(100+400,100,100);
+  square(200+400,200,100);
+  square(300+400,300,100);
+  square(0+400,200,100);
+  square(100+400,300,100);
+  square(200+400,0,100);
+  square(300+400,100,100);
+
+  square(0,0+400,100,0);
+  square(100,100+400,100);
+  square(200,200+400,100);
+  square(300,300+400,100);
+  square(0,200+400,100);
+  square(100,300+400,100);
+  square(200,0+400,100);
+  square(300,100+400,100);
+  
+  square(0+400,0+400,100,0);
+  square(100+400,100+400,100);
+  square(200+400,200+400,100);
+  square(300+400,300+400,100);
+  square(0+400,200+400,100);
+  square(100+400,300+400,100);
+  square(200+400,0+400,100);
+  square(300+400,100+400,100);
   
   //flower
   
-  fill(c);
-  ellipse(50,30,10,20);
-  ellipse(50,60,10,20);
-  ellipse(35,45,20,10);
-  ellipse(65,45,20,10);
-  fill("brown");
-  circle(50,45,15);
+//   fill(c);
+//   ellipse(50,30,10,20);
+//   ellipse(50,60,10,20);
+//   ellipse(35,45,20,10);
+//   ellipse(65,45,20,10);
+//   fill("brown");
+//   circle(50,45,15);
   
-  DrawFarmer()
-   
+  DrawFarmer()  
 }
 
+
 function DrawFarmer () {
-  
-push ()
+push();
   translate( farmerx * 100, farmery * 100)
   
   stroke(1)
@@ -107,8 +140,7 @@ push ()
   rect(55,160,5,10);
   rect(40,170,20,20);
   
-  pop()
-  
+  pop();
 }
 
   
