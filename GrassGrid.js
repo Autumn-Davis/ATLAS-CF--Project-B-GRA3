@@ -11,6 +11,17 @@ function draw(){
 }
 
 function drawGrass(){
+  for (i = 1; i < 9; i++){
+    let box1 = document.createElement("div")
+    if (i % 2 == 0){
+      box.style.backgroundColor = "white"  //("#8bae4f")
+    }
+    else(
+      box.style.backgroundColor = "black"
+    )
+  }
+
+
     // background("#5a6c2b");
     // fill("#8bae4f");
     // noStroke();
@@ -23,23 +34,23 @@ function drawGrass(){
     // square(200,0,100);
     // square(300,100,100);
 
-    let offset = width / 8;
-  for (let i = 0; i < 8; i++) {
-    let x = i * offset;
-    for (let j = 0; j < 8; j++) {
-      let y = offset / 2 + j * offset;
-      let stagger = 0;
-      if (j % 2 == 1) {
-        stagger = offset / 2;
-      }
-      drawSquare(x + stagger, y, 100, 100);
-    }
-  }
-}
+//     let offset = width / 8;
+//   for (let i = 0; i < 8; i++) {
+//     let x = i * offset;
+//     for (let j = 0; j < 8; j++) {
+//       let y = offset / 2 + j * offset;
+//       let stagger = 0;
+//       if (j % 2 == 1) {
+//         stagger = offset / 2;
+//       }
+//       drawSquare(x + stagger, y, 100, 100);
+//     }
+//   }
+// }
 
-function drawSquare(x, y, w, h){
-    push(); 
-    fill("#8bae4f");
-    noStroke();
-    pop();
+// function drawSquare(x, y, w, h){
+//     push(); 
+//     fill("#8bae4f");
+//     noStroke();
+//     pop();
  }
