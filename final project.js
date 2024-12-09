@@ -35,7 +35,6 @@ if (keyCode === LEFT_ARROW && farmerx > 0){
 
 
 function draw() {
-    background(220);
     drawBackground();
     drawFarmer();  
 }
